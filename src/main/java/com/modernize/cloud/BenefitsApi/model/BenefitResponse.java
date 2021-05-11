@@ -1,12 +1,17 @@
 package com.modernize.cloud.BenefitsApi.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDate;
 
 public class BenefitResponse {
     private Long id;
     private Long empId;
     private String description;
+    @JsonProperty("start_date")
     private LocalDate dateStart;
+    @JsonProperty("end_date")
+    private LocalDate dateEnd;
 
     public Long getId() {
         return id;
@@ -48,5 +53,4 @@ public class BenefitResponse {
         this.dateEnd = dateEnd;
     }
 
-    private LocalDate dateEnd;
 }
