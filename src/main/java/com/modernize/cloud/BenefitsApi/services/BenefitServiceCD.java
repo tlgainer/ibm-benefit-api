@@ -11,8 +11,8 @@ public interface BenefitServiceCD {
 
     List<BenefitCD> findAll() throws Exception;
     BenefitCD findById(String id);
-    void save(BenefitCD benefit);
-    void update(String id, BenefitCD benefit);
+    BenefitCD save(BenefitCD benefit);
+    BenefitCD update(String id, BenefitCD benefit);
 
     void delete(BenefitCD benefit);
     void deleteById(String id);

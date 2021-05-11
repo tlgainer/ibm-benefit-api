@@ -31,15 +31,13 @@ public class BenefitControllerCD {
     }
 
     @PostMapping
-    public ResponseEntity save(@Valid @RequestBody BenefitCD benefit) throws Exception {
-        benefitService.save(benefit);
-        return new ResponseEntity(HttpStatus.CREATED);
+    public ResponseEntity<BenefitCD> save(@Valid @RequestBody BenefitCD benefit) throws Exception {
+        return new ResponseEntity(benefitService.save(benefit), HttpStatus.CREATED);
     }
 
     @PutMapping({"/{id}"})
-    public ResponseEntity update(@PathVariable String id, @Valid @RequestBody BenefitCD benefit) throws Exception {
-        benefitService.update(id, benefit);
-        return new ResponseEntity(HttpStatus.OK);
+    public ResponseEntity<BenefitCD> update(@PathVariable String id, @Valid @RequestBody BenefitCD benefit) throws Exception {
+        return new ResponseEntity(benefitService.update(id, benefit), HttpStatus.OK);
     }
 
     @DeleteMapping({"/{id}"})

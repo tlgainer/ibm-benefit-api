@@ -37,14 +37,17 @@ public class BenefitServiceCDImpl implements BenefitServiceCD {
     }
 
     @Override
-    public void save(BenefitCD benefit) {
+    public BenefitCD save(BenefitCD benefit) {
         Response response = benefitRepository.post(benefit);
+        return findById(response.getId());
+
     }
 
     @Override
-    public void update(String id, BenefitCD benefit) {
+    public BenefitCD update(String id, BenefitCD benefit) {
         benefit.set_id(id);
         Response response = benefitRepository.update(benefit);
+        return findById(response.getId());
     }
 
     @Override
