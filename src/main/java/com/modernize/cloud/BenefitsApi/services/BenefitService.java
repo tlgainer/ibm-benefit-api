@@ -7,9 +7,10 @@ import java.util.List;
 
 public interface BenefitService {
 
-    List<BenefitResponse> findAll();
+    List<BenefitResponse> findAll() throws Exception;
     BenefitResponse findById(Long id);
     BenefitResponse save(BenefitRequest benefit);
+    BenefitResponse update(Long id, BenefitRequest benefit);
 
     void delete(BenefitRequest benefit);
     void deleteById(Long id);
