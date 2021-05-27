@@ -4,4 +4,4 @@ cloudant.url=https://apikey-v2-1scjskvl05tzmq5aqk5fq108wa1gyt0ncjighz3kkky3:e1ea
 cloudant.db=terrell-benefits-api
 
 kafka.bootstrapAddress=localhost:9092
-benefit.topic.name=topic-benefit
+benefit.topic.name=benefit-topic
